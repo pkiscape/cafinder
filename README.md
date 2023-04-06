@@ -6,7 +6,7 @@ Usage:
 ```
 cafinder.py -c mycertificate.pem
 ```
-Note: If you don't want to use the cafinder.py script, you can use openssl (openssl x509 -in cert.pem -noout -text)
+Note: If you don't want to use the cafinder.py script, you can use openssl (```openssl x509 -in cert.pem -noout -text```)
 
 The scripts looks for these fields in the certificate. 
 
