@@ -3,8 +3,9 @@ X509 Certificate decoder for the purpose of identifying a certificate chain
 
 
 Usage:
+```
 cafinder.py -c mycertificate.pem
-
+```
 Note: If you don't want to use the cafinder.py script, you can use openssl (openssl x509 -in cert.pem -noout -text)
 
 The scripts looks for these fields in the certificate. 
