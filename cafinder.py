@@ -1,5 +1,19 @@
 #!/usr/bin/env python3
 
+'''
+=========================================
+
+CA Finder
+
+=========================================
+
+
+@version  1 
+@author   pkiscape.com
+@link	  https://github.com/pkiscape
+
+'''
+
 import argparse
 from cryptography import x509
 
