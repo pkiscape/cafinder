@@ -17,7 +17,6 @@ CA Finder
 
 import argparse
 from cryptography import x509
-from cryptography.hazmat.backends import default_backend
 
 def load_cert(filename):
 
@@ -28,11 +27,11 @@ def load_cert(filename):
 
 	try:
 		with open(filename, "rb") as cert_file:
-			cert = x509.load_pem_x509_certificate(cert_file.read(),backend)
+			cert = x509.load_pem_x509_certificate(cert_file.read())
 
 	except ValueError:
 		with open(filename, "rb") as cert_file:
-			cert = x509.load_der_x509_certificate(cert_file.read(),backend)
+			cert = x509.load_der_x509_certificate(cert_file.read())
 
 	return cert
 
