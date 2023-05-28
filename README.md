@@ -15,3 +15,5 @@ The scripts looks for these fields in the certificate.
 3) X509v3 Subject Key Identifier: This is a sha1 hash of the end-entity's public key
 4) X509v3 Authority Key Identifier: This is a sha1 hash of the CA issuer's public key
 5) Authority Information Access, CA Issuers: This can contain a location (many times a URL) of where you can find the issuer CA certificate
+
+Please ensure that you are using cryptography version 3.1 or greater
