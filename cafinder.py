@@ -8,28 +8,31 @@ CA Finder
 =========================================
 
 
-@version  1 
-@author   pkiscape.com
-@link     https://github.com/pkiscape
+@version    2 
+@author     pkiscape.com
+@link	    https://github.com/pkiscape
 
 '''
 
+
 import argparse
 from cryptography import x509
-
+from cryptography.hazmat.backends import default_backend
 
 def load_cert(filename):
 
 	'''
 	This loads a PEM encoded certificate, if it's not PEM, it tries DER format
 	'''
+	backend = default_backend()
+
 	try:
 		with open(filename, "rb") as cert_file:
-			cert = x509.load_pem_x509_certificate(cert_file.read())
+			cert = x509.load_pem_x509_certificate(cert_file.read(),backend)
 
 	except ValueError:
 		with open(filename, "rb") as cert_file:
-			cert = x509.load_der_x509_certificate(cert_file.read())
+			cert = x509.load_der_x509_certificate(cert_file.read(),backend)
 
 	return cert
 
